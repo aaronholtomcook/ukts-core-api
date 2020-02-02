@@ -37,9 +37,9 @@ interface Endorsement {
 type SpecialEndorsement implements Endorsement{
     id: ID!
     name: String!
-    deleted_at: DateTime
-    created_at: DateTime!
-    updated_at: DateTime!
+    deleted_at: DateTimeZulu
+    created_at: DateTimeZulu!
+    updated_at: DateTimeZulu!
     pivot: Assignment!
     users: [User!]
 }
@@ -48,14 +48,14 @@ type EndorsementRequest {
     user: User!
     endorsement: Endorsement!
     endorsement_type: String!
-    approved_at: DateTime
-    denied_at: DateTime
+    approved_at: DateTimeZulu
+    denied_at: DateTimeZulu
     actioned_by: User!
 }
 
 type Assignment {
     user_id: Int!
     endorsement_id: Int!
-    created_at: DateTime!
+    created_at: DateTimeZulu!
     user: User!
 }

@@ -38,12 +38,12 @@ type Position {
     frequency: String!
     type: String!
     type_human: String!
-    created_at: DateTime!
-    updated_at: DateTime!
+    created_at: DateTimeZulu!
+    updated_at: DateTimeZulu!
 }
 
 type TrainingPositionAssignment {
     id: ID!
     position: Position!
-    deleted_at: DateTime!
+    deleted_at: DateTimeZulu!
 }
